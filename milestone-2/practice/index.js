@@ -31,3 +31,21 @@ if (age>=18){
 }else {
     console.log("You are not eligible to Segs");
 }
+
+// Ternary operator
+let age1=18;
+let result=age1>=18?"Eligible":"Not Eligible";
+console.log(result);
+
+// switch case
+let day="Sunday"
+switch(day){
+    case "Sunday":
+        console.log("Sunday Fun-day");
+        break;
+    case "monday":
+        console.log("Today is monday");
+        break;
+    default:
+        console.log("No match found");
+}
