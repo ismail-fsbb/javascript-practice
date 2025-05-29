@@ -1,14 +1,14 @@
 // Print Name
-document.write("Hello Ismail"+"<br><br>");
+console.log("Hello Ismail");
 
 // With Variable
 let name = "Imon";
-document.write("Hello, " + name +"<br><br>");
+console.log("Hello, " + name );
 
 // PrintName With function
-document.write("PrintName With function:"+"<br>");
+console.log("PrintName With function:");
 function printName(name) {
-    document.write("Hello, " + name +"<br><br>");
+    console.log("Hello, " + name );
 }
 printName("Ismail Hossain");
 
@@ -18,13 +18,13 @@ printName("Ismail Hossain");
 let num1=10;
 let num2=20;
 let result=num1+num2;
-document.write("Sum of "+num1+" and "+num2+" is: "+result+"<br><br>");
+console.log("Sum of "+num1+" and "+num2+" is: "+result);
 
 // Adding with function
-document.write("Adding with function:"+"<br>");
+console.log("Adding with function:");
 function sumNumber(num1,num2){
     let result=num1+num2;
-    document.write("Sum of "+num1+" and "+num2+" is: "+result+"<br><br>");
+    console.log("Sum of "+num1+" and "+num2+" is: "+result);
 } 
 sumNumber(5,6);
 
@@ -38,16 +38,35 @@ let language="Bangla";
 let profession = "Developer";
 let skills = ["HTML", "CSS", "JavaScript", "React", "nextJs", "WordPress", "PHP", "Laravel"];
 // Print your bio data
-document.write("Name: "+fullName+"<br>");
-document.write("Age: "+age+"<br>");
-document.write("Country: "+country+"<br>");
-document.write("Profession: "+profession+"<br>");
-document.write("Hobbies: "+hobbies+"<br>");
-document.write("Marital Status: "+status+"<br>");
-document.write("Language: "+language+"<br>");
-document.write("Skills: "+skills+"<br><br>");
+console.log("Name: "+fullName);
+console.log("Age: "+age);
+console.log("Country: "+country);
+console.log("Profession: "+profession);
+console.log("Hobbies: "+hobbies);
+console.log("Marital Status: "+status);
+console.log("Language: "+language);
+console.log("Skills: "+skills);
 // Skills show with for loop
-document.write("Skills show with for loop:"+"<br>");
+console.log("Skills show with for loop:");
 for(let i=0;i<skills.length;i++){
-    document.write(skills[i]+"<br>");
+    console.log(skills[i]);
+}
+
+
+// Bio with object
+const bio={
+    name: "ismail",
+    age: 25,
+    isStudent: true,
+    hobbies: ["Reading", "Traveling" , "Coding"],
+}
+
+console.log("Name = "+bio.name);
+console.log("Age = "+bio.age);
+console.log("isStudent = "+bio.isStudent);
+console.log("Hobbies = "+bio.hobbies);
+
+// with For in loop
+for (let key in bio) {
+    console.log(`${key} = ${bio[key]}`);
 }
