@@ -4,8 +4,8 @@ JavaScript supports two main categories of data types:
 1. Primitive Data Types
 2. Reference (Non-Primitive) Data Types
 
-# Primitive Data Types
-# These store single, immutable values directly in memory
+## Primitive Data Types
+### These store single, immutable values directly in memory
 
 ### String - Represents textual data enclosed in quotes.
 - Use when: Working with text.
@@ -30,7 +30,7 @@ JavaScript supports two main categories of data types:
 - Best choice for: Hiding object properties or using meta features.
 
 
-### Reference (Non-Primitive) Data Types
+## Reference (Non-Primitive) Data Types
 ### These store complex structures and are referenced in memory.
 
 ### Object - A collection of key-value pairs used to store structured data.
