@@ -5,13 +5,13 @@
 let age = 12;
 
 if (age < 13) {
-    document.write("Child"+"<br>");
+    console.log("Child"+"<br>");
 } else if (age >= 13 && age <= 17) {
-    document.write("Teenager"+"<br>");
+    console.log("Teenager"+"<br>");
 } else if(age >= 18) {
-    document.write("Adult"+"<br>");
+    console.log("Adult"+"<br>");
 } else {
-    document.write("Invalid Age"+"<br>");
+    console.log("Invalid Age"+"<br>");
 }
 
 // Even or Odd:
@@ -20,9 +20,9 @@ if (age < 13) {
 let num = 11;
 
 if (num % 2 == 0) {
-    document.write("Even"+"<br>");
+    console.log("Even"+"<br>");
 } else {
-    document.write("Odd"+"<br>");
+    console.log("Odd"+"<br>");
 }
 
 // Fruit Type Checker:
@@ -31,30 +31,30 @@ if (num % 2 == 0) {
 let fruitName = "mango";
 switch (fruitName){
     case "apple":
-        document.write("You selected Apple"+"<br>");
+        console.log("You selected Apple"+"<br>");
         break;
     case "banana":
-        document.write("You selected Banana"+"<br>");
+        console.log("You selected Banana"+"<br>");
         break;
     case "mango":
-        document.write("You selected Mango"+"<br>");
+        console.log("You selected Mango"+"<br>");
         break;
     default:
-        document.write("Invalid Fruit Name"+"<br>");
+        console.log("Invalid Fruit Name"+"<br>");
 }
 
 // Multiplication Table:
 // Take a number (e.g., 5) and print its multiplication table up to 10 using a for loop.
 let number=5;
 for (i=1;i<=10;i++){
-    document.write(`${number} x ${i} = ${number * i}`+"<br>");
+    console.log(`${number} x ${i} = ${number * i}`+"<br>");
 }
 
 // Print Even Numbers (2–20):
 // Use a while loop to print all even numbers from 2 to 20.
 let num2 = 2;
 while (num2 <= 20) {
-    document.write(num2+"<br>");
+    console.log(num2+"<br>");
 num2 += 2;
 }
 
@@ -62,7 +62,7 @@ num2 += 2;
 let count = 10;
 
 while (count >= 1) {
-document.write(count);
+console.log(count);
 count--;
 }
 
@@ -70,7 +70,7 @@ count--;
 let count2 = 0;
 
 do {
-document.write("Hello JavaScript!"+"<br>");
+console.log("Hello JavaScript!"+"<br>");
 count2++;
 } while (count2 < 5);
 
@@ -79,7 +79,7 @@ count2++;
 let number3 = 40;
 
 do {
-document.write("Keep trying..."+"<br>");
+console.log("Keep trying..."+"<br>");
 number3+=20;
 } while (number3 < 100);
 
@@ -93,40 +93,40 @@ for (let i = 1; i <= num4; i++) {
 factorial *= i;
 }
 
-document.write(`Factorial of ${num4} is ${factorial}`+"<br>");
+console.log(`Factorial of ${num4} is ${factorial}`+"<br>");
 
 
 // foreach basic example
 const fruits = ["Apple", "Banana", "Mango"];
 
 fruits.forEach(function(fruit) {
-document.write(fruit+"<br>");
+console.log(fruit+"<br>");
 });
 
 // With Index
 const colors = ["Red", "Green", "Blue"];
 
 colors.forEach((color, index) => {
-    document.write(`Index ${index} = ${color}`+"<br>");
+    console.log(`Index ${index} = ${color}`+"<br>");
 });
 
 // Function declaration
 function sum(a,b) {
 return a+b;
 }
-document.write(sum(2,3)+"<br>");
+console.log(sum(2,3)+"<br>");
 
 // function expression
 const multiply = function(a,b) {
 return a*b;
 }
-document.write(multiply(2,3)+"<br>");
+console.log(multiply(2,3)+"<br>");
 
 // arrow function
 const subtract = (a,b) => {
 return a-b;
 }
-document.write(subtract(4,3)+"<br>");
+console.log(subtract(4,3)+"<br>");
 
 // Sum of Even Numbers in an Array
 // Write a function that takes an array of numbers and returns the sum of only the even numbers.
@@ -136,22 +136,22 @@ function sumEven(numbers) {
 }
 
 const result = sumEven([1, 2, 3, 4, 5]);
-document.write(result+"<br>");
+console.log(result+"<br>");
 
 // Write an arrow function that filters only the positive numbers from an array.
 const filterPositive = arr => arr.filter(num => num > 0);
 
-document.write(filterPositive([-2, 5, 0, -1, 7])+"<br>");
+console.log(filterPositive([-2, 5, 0, -1, 7])+"<br>");
 
 // From an array of names, return the first name that has more than 5 characters.
 const names = ["Alice", "Bob", "Charlie", "David"];
 const longName = names.find(name => name.length > 5);
 
-document.write(longName+"<br>");
+console.log(longName+"<br>");
 
 // Given an array of fruits, use forEach() to print each fruit with a message.
 const fruits2 = ["Apple", "Banana", "Mango"];
 
 fruits2.forEach(fruit => {
-  document.write(`I love ${fruit}!`+"<br>");
+  console.log(`I love ${fruit}!`+"<br>");
 });
