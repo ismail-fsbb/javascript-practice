@@ -9,12 +9,14 @@ const bio = {
 console.log(bio);
 
 // 2. Take a number, check if it’s even or odd.
-let num=8;
-if ( num % 2 == 0 ){
-    console.log("Even");
-}else{
-    console.log("Odd");
+function oddEvenCheck(num) {
+    if ( num % 2 == 0 ){
+        console.log("Even");
+    }else{
+        console.log("Odd");
+    }
 }
+oddEvenCheck(8);
 
 // 3. Simple calculator: Input 2 numbers & an operator (+, -, *, /). Return result using if-else.
 function sum(para1, para2) {
