@@ -136,4 +136,14 @@ function outer() {
 
 ---
 
-> 🚀 Tip: Practice with real code and inspect results in the console to deeply understand these concepts.
+> Tip: Practice with real code and inspect results in the console to deeply understand these concepts.
+
+### ...arr → Spread Operator
+- The ... operator is called the spread operator.
+- It expands the array into individual values.
+### Math.max() is a built-in JavaScript function that returns the largest value from multiple numbers.
+- it expects separate numbers, not an array.
+```js
+let arr = [2, 9, 4];
+Math.max(...arr) → Math.max(2, 9, 4) → Output: 9
+```

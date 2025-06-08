@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Change background with click -->
+  <button onclick="changeBg()">Change body Background</button>
+  <!-- Count with +/- Button -->
+  <div>
+    <button onclick="decrease()">-</button>
+    <span id="count">0</span>
+    <button onclick="increase()">+</button>
+  </div>
+
+  <!-- Password visibility task -->
+  <form action="#">
+    <input type="password" id="password" placeholder="Enter password">
+    <label><input type="checkbox" onclick="togglePassword()"> Show Password</label>
+  </form>
+
+<script>
+  // bg change
+  function changeBg() {
+    document.body.style.backgroundColor = '#facc15'; // yellow-400
+  }
+  // count with +/- button
+  let count = 0;
+  function increase() {
+    count++;
+    document.getElementById('count').textContent = count;
+  }
+  function decrease() {
+    count--;
+    document.getElementById('count').textContent = count;
+  }
+  // password visibility
+  function togglePassword() {
+    const input = document.getElementById('password');
+    input.type = input.type === 'password' ? 'text' : 'password';
+  }
+</script>
+
+</body>
+</html>

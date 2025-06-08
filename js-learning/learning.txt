@@ -1,0 +1,95 @@
+Milestone 5: Arrays & Objects
+
+Topics:
+
+- Array methods: push, pop, shift, unshift, slice, splice, map, filter, reduce
+- Objects: properties, methods
+- Nested objects
+
+Practices:
+
+- Create a todo list array and manipulate it
+- Filter students by grade
+- Object of a person with name, age, greet method
+
+---
+
+Milestone 6: DOM Manipulation
+
+Topics:
+
+- What is the DOM?
+- Query selectors
+- DOM traversal
+- Event handling
+- Changing styles/content
+
+Practices:
+
+- Change background color with a button click
+- Make a counter with + and - buttons
+- Toggle password visibility
+
+---
+
+Milestone 7: Advanced JS Concepts
+
+Topics:
+
+- Callback functions
+- Promises
+- Async/Await
+- ES6+ (Destructuring, Spread, Rest, Template Literals)
+
+Practices:
+
+- Simulate an async operation (setTimeout)
+- Use fetch to get data from a public API
+- Destructure an object and array
+
+---
+
+Milestone 8: Modular JavaScript
+
+Topics:
+
+- Why modules?
+- ES6 modules: import/export
+- Structure a project with modules
+
+Practices:
+
+- Split code into modules (math.js, utils.js)
+- Import/export functions
+
+---
+
+Milestone 9: JavaScript in the Browser (Real Apps)
+
+Topics:
+
+- Storage (localStorage, sessionStorage)
+- Forms and form validation
+- Responsive interactions
+
+Practices:
+
+- Save and load data from localStorage
+- Validate a login form
+- Build a theme switcher (dark/light)
+
+---
+
+Milestone 10: Intro to the Web Ecosystem
+
+Topics:
+
+- HTML + CSS + JS overview
+- How the browser works
+- Dev tools deep dive
+- Hosting a basic HTML/JS project
+
+Practices:
+
+- Link JS to HTML
+- Inspect and debug in Chrome DevTools
