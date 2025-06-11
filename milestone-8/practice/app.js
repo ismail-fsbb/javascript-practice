@@ -1,4 +1,4 @@
-// app.js
+
 import { add, multiply } from './math.js';
 import { toUpper } from './utils.js';
 

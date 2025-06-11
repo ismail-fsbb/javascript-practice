@@ -12,3 +12,15 @@ const user = localStorage.getItem("username");
 localStorage.removeItem("username");
 localStorage.clear();
 ```
+
+### sessionStorage
+- Stores data temporarily for the current tab/session.
+- Data is cleared when the tab is closed.
+
+```js
+sessionStorage.setItem('email', 'ismail@example.com');
+const email = sessionStorage.getItem('email');
+sessionStorage.removeItem('email');
+sessionStorage.clear();
+
+```

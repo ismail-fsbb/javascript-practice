@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login Validation</title>
+</head>
+<body>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button type="submit">Login</button>
+    <p id="message"></p>
+  </form>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const message = document.getElementById('message');
+
+      if (!email.includes('@')) {
+        message.innerText = 'Invalid email.';
+      } else if (password.length < 6) {
+        message.innerText = 'Password must be at least 6 characters.';
+      } else {
+        message.innerText = 'Login successful!';
+      }
+    });
+  </script>
+</body>
+</html>
