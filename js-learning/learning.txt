@@ -1,3 +1,76 @@
+Milestone 1: Getting Started with JavaScript
+
+Topics:
+
+- What is JavaScript?
+- How browsers run JS
+- Setup: Code editor, browsers, console
+- Variables (var, let, const)
+- Data Types
+- Comments
+
+Practices:
+
+- Print your name
+- Add two numbers
+- Create variables for your bio data
+
+Assignment:
+
+- Make a JS file that declares personal data: name, age, isStudent, hobbies (array)
+
+================
+
+Milestone 2: Operators & Control Flow
+
+Topics:
+
+- Arithmetic, Comparison, Logical Operators
+- Conditionals: if-else, switch
+- Truthy/Falsy
+- Ternary Operator
+
+Milestone 2 Practice:
+
+- Check if a number is even/odd
+- Grade calculator using if-else
+- Age-based access control
+
+================
+
+Milestone 3: Loops & Iteration
+
+Topics:
+
+- For, While, Do-While loops
+- Break & Continue
+- Looping through arrays
+
+Milestone 3 Practice:
+
+- Print numbers 1–100
+- Print all even numbers from 1–50
+- Loop through an array of fruits and print them
+
+================
+
+Milestone 4: Functions & Scope
+
+Topics:
+
+- Function declaration vs expression
+- Parameters, arguments
+- Return values
+- Scope (global, block, lexical)
+
+Practices:
+
+- Function to add any two numbers
+- Function that checks if a year is a leap year
+- Scope demo
+
+================
+
 Milestone 5: Arrays & Objects
 
 Topics:
@@ -13,6 +86,8 @@ Practices:
 - Object of a person with name, age, greet method
 
 ---
+
+================
 
 Milestone 6: DOM Manipulation
 
@@ -32,6 +107,8 @@ Practices:
 
 ---
 
+================
+
 Milestone 7: Advanced JS Concepts
 
 Topics:
@@ -47,7 +124,7 @@ Practices:
 - Use fetch to get data from a public API
 - Destructure an object and array
 
----
+---================
 
 Milestone 8: Modular JavaScript
 
@@ -62,7 +139,7 @@ Practices:
 - Split code into modules (math.js, utils.js)
 - Import/export functions
 
----
+---================
 
 Milestone 9: JavaScript in the Browser (Real Apps)
 
@@ -78,7 +155,7 @@ Practices:
 - Validate a login form
 - Build a theme switcher (dark/light)
 
----
+---================
 
 Milestone 10: Intro to the Web Ecosystem
 
@@ -93,3 +170,5 @@ Practices:
 
 - Link JS to HTML
 - Inspect and debug in Chrome DevTools
+
+================

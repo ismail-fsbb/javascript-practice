@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Dashboard</title>
+  <style>
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ccc; padding: 8px; }
+    button { cursor: pointer; margin-right: 5px; }
+    .selected { background-color: #d3f9d8; }
+  </style>
+</head>
+<body>
+
+<h1>Student Management Dashboard</h1>
+
+<form id="student-form">
+  <input type="text" id="name" placeholder="Name" required />
+  <input type="number" id="age" placeholder="Age" min="1" required />
+  <input type="text" id="grades" placeholder="Grades (comma separated)" required />
+  <button type="submit">Add Student</button>
+  <button type="button" id="cancel-edit" style="display:none;">Cancel Edit</button>
+</form>
+
+<label>
+  <input type="checkbox" id="filter-passed" />
+  Show only passed students (avg grade > 60)
+</label>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th><th>Age</th><th>Grades</th><th>Average</th><th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="student-table-body"></tbody>
+</table>
+
+<script src="student.js"></script>
+
+</body>
+</html>
