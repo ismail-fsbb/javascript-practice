@@ -1,7 +1,7 @@
-// Load students from localStorage or empty array
 let students = JSON.parse(localStorage.getItem('students')) || [];
 let editingStudentId = null;
 
+// DOM
 const form = document.getElementById('student-form');
 const nameInput = document.getElementById('name');
 const ageInput = document.getElementById('age');
@@ -9,127 +9,135 @@ const gradesInput = document.getElementById('grades');
 const cancelEditBtn = document.getElementById('cancel-edit');
 const filterPassedCheckbox = document.getElementById('filter-passed');
 const tbody = document.getElementById('student-table-body');
+const themeToggleBtn = document.getElementById('theme-toggle');
+const passwordInput = document.getElementById('teacher-password');
+const togglePasswordBtn = document.getElementById('toggle-password');
 
-// Save students array to localStorage
-function saveToLocal() {
-  localStorage.setItem('students', JSON.stringify(students));
-}
+// Helpers
+const saveToLocal = () => localStorage.setItem('students', JSON.stringify(students));
+const calculateAverage = grades => grades.length ? +(grades.reduce((a, b) => a + b, 0) / grades.length).toFixed(2) : 0;
 
-// Calculate average grade of array of grades
-function calculateAverage(grades) {
-  if (grades.length === 0) return 0;
-  const sum = grades.reduce((acc, val) => acc + val, 0);
-  return +(sum / grades.length).toFixed(2);
-}
-
-// Render student table with optional filter for passed students
+// Render Table
 function renderTable() {
   tbody.innerHTML = '';
-
-  const showPassedOnly = filterPassedCheckbox.checked;
-
-  const filteredStudents = showPassedOnly
-    ? students.filter(s => calculateAverage(s.grades) > 60)
+  const filtered = filterPassedCheckbox.checked
+    ? students.filter(({ grades }) => calculateAverage(grades) > 60)
     : students;
 
-  filteredStudents.forEach(student => {
-    const avg = calculateAverage(student.grades);
-
+  filtered.forEach(({ id, name, age, grades }) => {
+    const avg = calculateAverage(grades);
     const tr = document.createElement('tr');
-
+    tr.className = 'hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer transition';
     tr.innerHTML = `
-      <td>${student.name}</td>
-      <td>${student.age}</td>
-      <td>${student.grades.join(', ')}</td>
-      <td>${avg}</td>
-      <td>
-        <button class="edit-btn" data-id="${student.id}">Edit</button>
-        <button class="delete-btn" data-id="${student.id}">Delete</button>
+      <td class="p-3 border-b">${name}</td>
+      <td class="p-3 border-b">${age}</td>
+      <td class="p-3 border-b">${grades.join(', ')}</td>
+      <td class="p-3 border-b">${avg}</td>
+      <td class="p-3 border-b space-y-1">
+        <div class="space-x-2">
+          <button class="edit-btn bg-yellow-400 px-2 py-1 rounded text-white" data-id="${id}">Edit</button>
+          <button class="delete-btn bg-red-500 px-2 py-1 rounded text-white" data-id="${id}">Delete</button>
+        </div>
       </td>
     `;
-
+    tr.onclick = e => {
+      if (!e.target.closest('button')) {
+        document.querySelectorAll('#student-table-body tr').forEach(row =>
+          row.classList.remove('selected')
+        );
+        tr.classList.add('selected');
+      }
+    };
     tbody.appendChild(tr);
   });
 
-  // Add event listeners for edit and delete buttons
   document.querySelectorAll('.edit-btn').forEach(btn =>
-    btn.addEventListener('click', e => {
-      const id = Number(e.target.dataset.id);
-      startEditStudent(id);
-    })
+    btn.onclick = () => startEditStudent(+btn.dataset.id)
   );
-
   document.querySelectorAll('.delete-btn').forEach(btn =>
-    btn.addEventListener('click', e => {
-      const id = Number(e.target.dataset.id);
-      deleteStudent(id);
-    })
+    btn.onclick = () => deleteStudent(+btn.dataset.id)
   );
 }
 
-// Handle form submit for add/edit student
-form.addEventListener('submit', e => {
+// Form Submission
+form.onsubmit = e => {
   e.preventDefault();
-
   const name = nameInput.value.trim();
   const age = parseInt(ageInput.value);
-  const gradesStr = gradesInput.value.trim();
+  const grades = gradesInput.value
+    .split(',')
+    .map(s => parseFloat(s.trim()))
+    .filter(n => !isNaN(n));
 
-  if (!name || isNaN(age) || !gradesStr) {
-    alert('Please fill all fields correctly');
+  if (!name || isNaN(age) || grades.length === 0) {
+    alert('Please enter valid name, age and numeric grades.');
     return;
   }
 
-  const grades = gradesStr.split(',').map(g => parseFloat(g.trim())).filter(n => !isNaN(n));
-
   if (editingStudentId !== null) {
-    // Edit existing student
     const index = students.findIndex(s => s.id === editingStudentId);
     if (index !== -1) {
-      students[index] = { id: editingStudentId, name, age, grades };
+      students[index] = { ...students[index], name, age, grades };
     }
     editingStudentId = null;
-    cancelEditBtn.style.display = 'none';
+    cancelEditBtn.classList.add('hidden');
   } else {
-    // Add new student with unique id (timestamp)
     students.push({ id: Date.now(), name, age, grades });
   }
 
   form.reset();
   saveToLocal();
   renderTable();
-});
+};
 
-// Cancel editing mode
-cancelEditBtn.addEventListener('click', () => {
+// Cancel Edit
+cancelEditBtn.onclick = () => {
   editingStudentId = null;
   form.reset();
-  cancelEditBtn.style.display = 'none';
-});
+  cancelEditBtn.classList.add('hidden');
+};
 
-// Start editing student by filling form inputs
+// Edit Student
 function startEditStudent(id) {
-  const student = students.find(s => s.id === id);
-  if (!student) return;
-
-  nameInput.value = student.name;
-  ageInput.value = student.age;
-  gradesInput.value = student.grades.join(', ');
+  const s = students.find(s => s.id === id);
+  if (!s) return;
+  nameInput.value = s.name;
+  ageInput.value = s.age;
+  gradesInput.value = s.grades.join(', ');
   editingStudentId = id;
-  cancelEditBtn.style.display = 'inline-block';
+  cancelEditBtn.classList.remove('hidden');
 }
 
-// Delete student by id
+// Delete Student
 function deleteStudent(id) {
-  if (!confirm('Are you sure you want to delete this student?')) return;
-
+  if (!confirm('Are you sure to delete?')) return;
   students = students.filter(s => s.id !== id);
   saveToLocal();
   renderTable();
 }
 
-// Re-render table when filter checkbox changes
-filterPassedCheckbox.addEventListener('change', renderTable);
+// Theme
+themeToggleBtn.onclick = () => {
+  document.documentElement.classList.toggle('dark');
+  localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+};
 
-// Initial render on page load
+// Init theme
+(function () {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark');
+  }
+})();
+
+// Toggle password visibility
+togglePasswordBtn.onclick = () => {
+  const type = passwordInput.type === 'password' ? 'text' : 'password';
+  passwordInput.type = type;
+  togglePasswordBtn.textContent = type === 'password' ? 'Show' : 'Hide';
+};
+
+// Filter
+filterPassedCheckbox.onchange = renderTable;
+
+// Init
 renderTable();
