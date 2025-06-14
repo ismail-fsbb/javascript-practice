@@ -4,40 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Student Dashboard</title>
-  <style>
-    table { width: 100%; border-collapse: collapse; }
-    th, td { border: 1px solid #ccc; padding: 8px; }
-    button { cursor: pointer; margin-right: 5px; }
-    .selected { background-color: #d3f9d8; }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50 p-6 font-sans">
 
-<h1>Student Management Dashboard</h1>
+  <h1 class="text-2xl font-bold mb-6 text-center">Student Management Dashboard</h1>
 
-<form id="student-form">
-  <input type="text" id="name" placeholder="Name" required />
-  <input type="number" id="age" placeholder="Age" min="1" required />
-  <input type="text" id="grades" placeholder="Grades (comma separated)" required />
-  <button type="submit">Add Student</button>
-  <button type="button" id="cancel-edit" style="display:none;">Cancel Edit</button>
-</form>
+  <form id="student-form" class="flex flex-wrap gap-4 mb-4 items-center justify-center">
+    <input type="text" id="name" placeholder="Name" required
+      class="border border-gray-300 rounded px-3 py-2 w-40 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    <input type="number" id="age" placeholder="Age" min="1" required
+      class="border border-gray-300 rounded px-3 py-2 w-24 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    <input type="text" id="grades" placeholder="Grades (comma separated)" required
+      class="border border-gray-300 rounded px-3 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    <button type="submit"
+      class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Add Student</button>
+    <button type="button" id="cancel-edit"
+      class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition hidden">Cancel Edit</button>
+  </form>
 
-<label>
-  <input type="checkbox" id="filter-passed" />
-  Show only passed students (avg grade > 60)
-</label>
+  <label class="flex items-center gap-2 mb-4 justify-center">
+    <input type="checkbox" id="filter-passed" class="w-4 h-4" />
+    <span class="text-sm text-gray-700">Show only passed students (avg grade &gt; 60)</span>
+  </label>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th><th>Age</th><th>Grades</th><th>Average</th><th>Actions</th>
-    </tr>
-  </thead>
-  <tbody id="student-table-body"></tbody>
-</table>
+  <div class="overflow-x-auto">
+    <table class="min-w-full table-auto border border-gray-300 bg-white shadow rounded">
+      <thead>
+        <tr class="bg-gray-100 text-left text-gray-700">
+          <th class="p-3 border-b">Name</th>
+          <th class="p-3 border-b">Age</th>
+          <th class="p-3 border-b">Grades</th>
+          <th class="p-3 border-b">Average</th>
+          <th class="p-3 border-b">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="student-table-body" class="[&>.selected]:bg-green-100"></tbody>
+    </table>
+  </div>
 
-<script src="student.js"></script>
+  <script src="student.js"></script>
 
 </body>
 </html>

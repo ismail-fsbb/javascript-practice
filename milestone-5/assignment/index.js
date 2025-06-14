@@ -41,19 +41,19 @@ addStudent({
 function removeStudent(id) {
     const index = students.findIndex(student => student.id === id);
     if (index !== -1) {
-        students.splice(index, 1); // Removes 1 element at found index
+        students.splice(index, 1);
     }
 }
-removeStudent(2); // Removes Bob
+removeStudent(2);
   
 // Edit Student (using splice or direct update)
 function editStudent(id, updatedData) {
     const index = students.findIndex(student => student.id === id);
     if (index !== -1) {
         students[index] = {
-        ...students[index],
-        ...updatedData,
-        getAverage: students[index].getAverage, // keep original method
+            ...students[index],
+            ...updatedData,
+            getAverage: students[index].getAverage,
         };
     }
 }
