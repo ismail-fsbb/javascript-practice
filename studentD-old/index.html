@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 p-6 font-sans">
+
+  <div class="max-w-6xl mx-auto space-y-8">
+    <div class="flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-center w-full">Student Management Dashboard</h1>
+      <button id="theme-toggle" class="absolute right-6 top-6 px-4 py-2 rounded bg-gray-800 text-white dark:bg-yellow-400 dark:text-black transition">Switch Theme</button>
+    </div>
+
+    <!-- Student Form -->
+    <form id="student-form" class="flex flex-wrap gap-4 items-center justify-center">
+      <input type="text" id="name" placeholder="Name" required
+        class="border border-gray-300 dark:border-gray-700 rounded px-3 py-2 w-40 bg-white dark:bg-gray-800" />
+      <input type="number" id="age" placeholder="Age" min="1" required
+        class="border border-gray-300 dark:border-gray-700 rounded px-3 py-2 w-24 bg-white dark:bg-gray-800" />
+      <input type="text" id="grades" placeholder="Grades (comma separated)" required
+        class="border border-gray-300 dark:border-gray-700 rounded px-3 py-2 w-64 bg-white dark:bg-gray-800" />
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Add Student</button>
+      <button type="button" id="cancel-edit" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition hidden">Cancel Edit</button>
+    </form>
+
+    <!-- Filter -->
+    <label class="flex items-center gap-2 justify-center">
+      <input type="checkbox" id="filter-passed" class="w-4 h-4" />
+      <span class="text-sm">Show only passed students (avg grade &gt; 60)</span>
+    </label>
+
+    <!-- Student Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto border border-gray-300 bg-white dark:bg-gray-800 shadow rounded text-sm">
+        <thead>
+          <tr class="bg-gray-100 dark:bg-gray-700 text-left text-gray-700 dark:text-gray-100">
+            <th class="p-3 border-b">Name</th>
+            <th class="p-3 border-b">Age</th>
+            <th class="p-3 border-b">Grades</th>
+            <th class="p-3 border-b">Average</th>
+            <th class="p-3 border-b">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="student-table-body" class="[&>.selected]:bg-green-100 dark:[&>.selected]:bg-green-900"></tbody>
+      </table>
+    </div>
+
+    <!-- Teacher Login -->
+    <div class="max-w-md mx-auto bg-white dark:bg-gray-800 p-4 rounded shadow">
+      <h2 class="text-lg font-semibold mb-2">Teacher Login</h2>
+      <form id="teacher-login" class="space-y-4">
+        <input type="text" placeholder="Username" required class="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 dark:bg-gray-700" />
+        <div class="relative">
+          <input type="password" id="teacher-password" placeholder="Password" required class="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 dark:bg-gray-700" />
+          <button type="button" id="toggle-password" class="absolute right-2 top-1/2 -translate-y-1/2 text-sm text-blue-600 dark:text-yellow-300">Show</button>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="student.js"></script>
+</body>
+</html>

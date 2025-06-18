@@ -13,7 +13,6 @@ let students = [
 
 function filterByGrade() {
  const passed = students.filter((item) =>  getAverage(item.grades)>60);
-
   console.log(passed);
 }
 console.log("passed")
