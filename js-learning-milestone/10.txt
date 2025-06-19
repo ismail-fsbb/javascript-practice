@@ -1,0 +1,31 @@
+Milestone 11: Introduction to React.js
+
+Topics:
+
+- What is React?
+- JSX, Components, Props, State
+- Event handling
+- useEffect & useState
+
+Practices:
+
+- Counter app in React
+- Show/hide elements
+- Fetch and display data
+
+---
+
+Milestone 12: React Routing & Component Design
+
+Topics:
+
+- React Router basics
+- Component structure & folders
+- Prop drilling & lifting state
+- Conditional rendering
+
+Practices:
+
+- Multi-page app with React Router
+- Parent-child communication
+- Dynamic routing
