@@ -29,3 +29,30 @@ Practices:
 - Multi-page app with React Router
 - Parent-child communication
 - Dynamic routing
+
+Milestone 13: Next.js Basics
+
+Topics:
+- What is Next.js?
+- Pages & Routing
+- Linking and Navigation
+- Static vs Server-side rendering
+- API Routes
+
+Practices: 
+- Create a new Next.js app 
+- Add a few pages and navigate 
+- Create a simple API route
+
+Milestone 14: Advanced Next.js Features
+
+Topics:
+- getStaticProps, getServerSideProps
+- Dynamic Routes with Data
+- Image Optimization
+- Deployment (Vercel)
+
+Practices:
+- Create a blog with Markdown files 
+- Use getStaticProps to load them 
+- Optimize images
