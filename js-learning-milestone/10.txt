@@ -56,3 +56,15 @@ Practices:
 - Create a blog with Markdown files 
 - Use getStaticProps to load them 
 - Optimize images
+
+
+Most Important
+use server
+
+use client
+
+useeffect
+
+usestate
+
+useref
