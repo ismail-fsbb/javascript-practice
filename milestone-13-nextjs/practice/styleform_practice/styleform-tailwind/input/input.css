@@ -1,0 +1,314 @@
+@import "tailwindcss";
+
+
+@theme {
+    /* Global Font */
+    --font-primary: "Orbitron", sans-serif;
+    --font-secondary: "Saira", sans-serif;
+
+    /* Global Colors */
+    --color-primary: #12398D;
+    --color-light-blue: #F3F7FF;
+
+    /* body bg gradient */
+    --background-image-custom-radial: radial-gradient(120.34% 120.94% at 52.45% 23.31%, rgba(20, 64, 158, 1) 0%, rgba(13, 43, 111, 1) 30%, rgb(2 14 48) 78%, rgb(0, 0, 13) 100%);
+    --background-image-liner: linear-gradient(89deg, rgb(255, 79, 185) 0%, rgb(255, 212, 102) 100%);
+
+    --background-image-about: url('../images/about-image-bg.png');
+    --background-image-hero: linear-gradient(180deg, rgba(19, 60, 149, 0) 0%, rgba(19, 60, 149, 0.60) 100%),url('../images/hero-bg-white-blue-marble-color-mix-textured-backdrop.png');
+    --background-image-cta-1: linear-gradient(0deg,rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0.1) 100%),url('../images/cta-bg-1.png');
+
+    /* Text Shadow */
+    --text-shadow-1: 0px -6px 4px rgba(255,255,255,.13), 0px 6px 5px rgb(31,81,190);
+    --text-shadow-2: 0px -8px 4px rgba(255,255,255,.15), 0px 8px 7px rgb(31,81,190);
+    --text-shadow-3: 0px -12px 4px rgba(255,255,255,.13), 0px 12px 7px rgb(31,81,190);
+    --text-shadow-4: rgba(255, 255, 255, 0.15) 0px -8px 4px, rgb(31, 81, 190) 0px 8px 7px;
+    --text-shadow-5: 0px -5px 3px #ffffff29,0px 5px 3px #1F51BE;
+
+    /* Box Shadow */
+    --shadow-1: -10px -10px 2px rgba(255, 255, 255, 0.15), 10px 10px 6px rgb(31, 81, 190);
+    --shadow-2: -5px -5px 2px #ffffff26, 5px 5px 6px rgb(31, 81, 190);
+    --shadow-3: 0px -10px 14px #FFD466,0px 10px 16px #1F51BE;
+    --shadow-4: 10px 10px 6px #1F51BE,-10px -10px 11px #c2987280;
+    --shadow-gallery-image: 4px 4px 6px #c298729c, -2px -4px 6px #e6f53c73;
+    --shadow-liner: rgb(255, 212, 102) 0px 0px 8px 0px, rgb(196, 72, 255) 0px 0px 8px 0px;
+    --shadow-story-card: 4px 4px 20px rgb(76 205 226 / 40%),-4px -4px 20px rgb(90 63 255 / 40%);
+    --shadow-blog-image: rgba(255, 79, 184, 0.5) -6px -6px 10px 0px, rgba(194, 152, 114, 0.6) 6px 6px 8px 0px;
+
+    /* filter: drop-shadow(rgb(156, 234, 255) 0px -30px 7px) drop-shadow(rgb(170, 77, 214) 0px -62px 7px);
+    filter: drop-shadow(0px -10px 11px var(--token-cf31c011-a3f8-4edf-a2a7-3d95ea1e8e3f, #ffd466)) drop-shadow(0px -30px 11px var(--token-d018cdab-d079-49f9-9652-86d79cbaef94, rgba(255, 73, 171, 0.25))); */
+
+    /* Font Size */
+    --text-2xl-1: 27px;
+    --text-2xl-1--line-height: 1.2;
+    --text-3xl-1: 33px;
+    --text-3xl-1--line-height: 1.2;
+    --text-4xl-1: 42px;
+    --text-4xl-1--line-height: 1.2;
+    --text-5xl-1: 50px;
+    --text-5xl-1--line-height: 1.2;
+    --text-6xl-1: 70px;
+    --text-6xl-1--line-height: 1.2;
+    --text-7xl-1: 81px;
+    --text-7xl-1--line-height: 1.2;
+}
+
+@layer base{
+    body{
+        @apply overflow-x-hidden relative font-primary bg-custom-radial;
+    }
+    html{
+        @apply scroll-smooth;
+    }
+    h1, h2,h3, h4, h5, h6{
+        @apply text-white capitalize;
+    }
+    p{
+        @apply font-secondary text-base xl:text-xl text-light-blue;
+    }
+    li{
+        @apply font-secondary text-lg xl:text-xl text-light-blue;
+    }
+    
+    ::selection{
+        @apply bg-primary text-white;
+    }
+
+    section{
+        @apply overflow-hidden py-14 xl:py-16 2xl:py-24;
+    }
+    
+}
+
+@layer components{ 
+    
+    .container{
+        @apply mx-auto px-6 w-full md:!w-[720px] lg:!w-[960px] xl:!w-[1140px] 2xl:!w-[1296px];
+    }
+    /* title */
+    .d2c_section_title{
+        @apply text-3xl md:text-[38px] lg:text-5xl xl:text-6xl 2xl:text-6xl-1 text-shadow-3 font-semibold uppercase;
+    }
+    .d2c_section_sub_title{
+        @apply text-2xl lg:text-2xl-1 xl:text-4xl-1 font-bold text-shadow-2;
+    }
+
+    /* Blog Title */
+    .d2c_blog_card{
+        @apply mb-5;
+    }
+    .d2c_blog_title{
+        @apply font-secondary text-xl md:text-xl lg:text-[22px] xl:text-2xl-1 text-white;
+    }
+    .d2c_post_image{
+        @apply mix-blend-luminosity h-[277px];
+    }
+
+    /* Button */
+    .d2c_btn{
+        @apply px-6 py-3 md:px-10 md:py-4 bg-white uppercase text-primary font-primary font-bold text-[15px] md:text-xl shadow-1 inline-block;
+    }
+
+    /* Small rounded shape white bg */
+    .d2c_small_rounded_shape{
+        @apply w-10 h-4 rounded-[10px] bg-white;
+    }
+
+    /* Social link style */
+    .d2c_social_link{
+        @apply w-10 h-10 rounded-md bg-white inline-flex items-center justify-center text-primary p-2 shadow-2 text-xl;
+    }
+
+    /* Form style */
+    .form-control{
+        @apply rounded-md border border-white/15 bg-transparent text-white font-secondary font-light text-xl w-full py-3 px-5 focus:outline-none placeholder:text-white/50;
+    }
+
+    /* nav css */
+    #navbar{
+        @apply z-30;
+    }
+    .d2c_logo{
+        @apply max-w-[235px] xl:max-w-[235px] [filter:drop-shadow(0px_12px_4px_#1F51BE)_drop-shadow(0px_-10px_2px_rgba(255,255,255,0.13))];
+    }
+    .d2c_navbar{
+        @apply bg-[#1e428d66] border-none border-b border-primary py-4 lg:py-6;
+    }
+    .d2c_navbar .d2c_btn{
+        @apply px-6 lg:px-10 py-2 lg:py-3;
+    }
+    .d2c_navigation .nav_link,#mobile-menu .nav_link{
+        @apply text-light-blue inline-block text-base xl:text-xl font-secondary font-medium transition duration-300 capitalize py-2 mb-0 relative after:content-[''] after:absolute after:h-2 after:w-1 after:transition-all after:rounded-lg after:left-1/2 after:transform after:-translate-x-1/2 after:-bottom-1 after:bg-liner after:shadow-liner after:opacity-0 hover:after:w-6 hover:after:opacity-100;
+    }
+    .d2c_navigation .nav_link.active{
+        @apply after:content-[''] after:w-6 after:opacity-100 transition-all;
+    }
+    #mobile-menu-btn{
+        @apply border rounded-sm  bg-primary p-1 text-light-blue border-light-blue focus:outline-none transition-all duration-500;
+    }
+    #mobile-menu {
+        @apply top-3 opacity-100 visible ;
+        transition: top 1s ease-in-out, opacity 1s ease-in-out;
+    }
+    #mobile-menu .nav_link{
+        @apply text-light-blue text-center text-2xl;
+    }
+    .nav_link_Small{
+        @apply py-1 lg:py-0 capitalize;
+    }
+    /* When hidden, move it off-screen and fade out */
+    #mobile-menu.hidden {
+        @apply top-[-200px] opacity-0 visible block;
+    }
+
+
+    /* ====================== Home page ===================== */
+
+    /* hero bottom image slider css */
+    .d2c_image_slider .swiper-wrapper img{
+        @apply h-[150px] md:h-[180px] lg:h-[200px] xl:h-[300px] 2xl:h-[426px] w-full object-cover;
+    }
+
+    /* Testimonial section */
+    .d2c_client_name{
+        @apply text-2xl font-bold font-secondary capitalize mt-8;
+    }
+
+    /* Awards card section */
+    .d2c_awards_wrapper{
+        @apply grid md:grid-cols-2 gap-10 lg:gap-16 xl:gap-24;
+    }
+    .d2c_award_card{
+        @apply rounded-lg bg-white/10 shadow-4 py-10 xl:py-14 px-6 xl:px-10 space-y-6;
+    }
+    .d2c_award_card_title{
+        @apply text-lg xl:text-2xl uppercase font-bold text-center;
+    }
+
+    /* Logo Slider */
+    .d2c_logo_wrapper{
+        @apply p-5 bg-white/10 h-20 md:h-24 xl:h-[120px] 2xl:h-[140px] rounded-lg flex items-center justify-center;
+    }
+
+    /* ======================= About page ======================= */
+    /* Team section */
+    .d2c_team_card{
+        @apply p-3 shadow-4 bg-white/10;
+    }
+    .d2c_team_image_wrapper{
+        @apply w-full h-[260px];
+    }
+    .d2c_expert_name{
+        @apply uppercase text-xl font-bold;
+    }
+    .d2c_expert_designation{
+        @apply text-lg capitalize font-medium;
+    }
+
+    /* ======================= Blog Details page ======================= */
+    .d2c_blog_content p{
+        @apply text-lg md:text-xl xl:text-2xl pb-2;
+    }
+    .d2c_content_title{
+        @apply text-2xl-1 xl:text-3xl font-bold font-secondary mb-2;
+    }
+
+    /* Footer */
+    .d2c_footer_title{
+        @apply text-2xl lg:text-2xl-1 xl:text-4xl-1 font-bold text-shadow-2;
+    }
+    .d2c_footer_logo{
+        @apply max-w-[235px] lg:max-w-[300px] xl:max-w-[416px] [filter:drop-shadow(0px_12px_4px_#1F51BE)_drop-shadow(0px_-10px_2px_rgba(255,255,255,0.13))];
+    }
+    .d2c_footer_content{
+        @apply py-10 lg:py-14;
+    }
+    footer ul li a{
+        @apply font-secondary text-base lg:text-2xl-1 font-light hover:text-white/50 transition-all;
+    }
+    .d2c_footer_content .d2c_description{
+        @apply text-lg lg:text-2xl-1 xl:text-[40px] font-light font-secondary text-center md:text-left py-5 md:py-2 lg:py-10;
+    }
+    /* Preloader */
+    .preloader{
+        @apply h-full fixed w-full z-50 bg-primary transition duration-300 flex items-center justify-center;
+    }
+    .custom-loader {
+        @apply w-[120px] h-[22px] rounded-[40px] text-light-blue border-2 border-solid relative overflow-hidden bg-light-blue mt-[15px];
+    }
+    .custom-loader::before {
+        @apply content-[''] absolute m-[2px] w-[14px] top-0 bottom-0 left-[-20px] rounded-[inherit] bg-primary shadow-[-10px_0_12px_3px_var(--color-primary)];
+    }
+
+    /* Bottom to top ScrollBtn */
+    .d2c_scroll_btn {
+        @apply flex items-center justify-center bg-primary text-white text-xl rounded w-8 h-8 fixed z-30 bottom-8 right-8 md:right-24 border border-solid transition-all duration-300;
+    }
+    #scrollBtn {
+        @apply hidden fixed bottom-5 right-5 z-30;
+    }
+    #scrollBtn.show {
+        @apply block; 
+    }
+
+}
+
+@layer utilities{
+
+    /* hero bottom image slider css */
+    .d2c_image_slider .swiper-wrapper, .d2c_logo_slider  .swiper-wrapper, .d2c_team_slider .swiper-wrapper{
+        -webkit-transition-timing-function: linear !important;
+        transition-timing-function: linear !important;
+    }
+    
+    /* Filters */
+    .filter-custom-1 {
+        filter: drop-shadow(0px -10px 11px #ffd466) drop-shadow(0px -30px 11px rgba(255, 73, 171, 0.25));
+    }
+    
+    .filter-custom-2 {
+        filter: drop-shadow(0px -29px 4px #9CEAFF)  drop-shadow(0px -29px 2px #AA4DD6);
+    }
+
+    .filter-custom-2-mobile {
+        filter: drop-shadow(0px -10px 4px #9CEAFF)  drop-shadow(0px -20px 2px #AA4DD6);
+    }
+    
+    .filter-custom-3 {
+        filter: drop-shadow(0px -10px 26px #FFD466) drop-shadow(0px -30px 26px #FF4FB8);
+    }
+
+    .filter-custom-4{
+        filter: drop-shadow(0px -5px 1px #ffffff29) drop-shadow(0px 5px 4px #1F51BE);
+    }
+
+    .filter-custom-5{
+        filter: drop-shadow(6px 6px 5px #c2987299) drop-shadow(-6px -6px 7px #ff4fb880);
+    }
+
+    .filter-6{
+        filter: drop-shadow(0px -13px 6px #FFD466) drop-shadow(0px -24px 4px #E15C5C)!important;
+    }
+
+    .filter-7{
+        filter: drop-shadow(0px -10px 6px  #ffd466) drop-shadow(0px 10px 7px  rgb(31, 81, 190));
+    }
+
+    .d2c_award_icon{
+        filter: drop-shadow(0px -8px 2px rgba(255,255,255,.13)) drop-shadow(0px 8px 3px rgb(77,97,200));
+    }
+    .d2c_logo_shadow{
+        filter: drop-shadow(rgba(255, 255, 255, 0.13) 0px -8px 2px) drop-shadow(rgb(77, 97, 200) 0px 8px 3px);
+    }
+    /* {Preloader */
+    .custom-loader::before {
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%, -30px 50%);
+        animation: continuous 1s infinite linear;
+    }
+    
+    @keyframes continuous {
+        100% {left: calc(100% + 20px)}
+    }
+
+    
+}

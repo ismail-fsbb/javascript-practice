@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="og:description" content="#">
+    <meta name="og:title" property="og:title" content="#">
+    <meta property="og:image" content="#">
+    <link rel="icon" href="../public/assets/images/logo/favicon.png" type="image/gif" sizes="16x16">
+    <title>Styleform - Beauty Fashion Template</title>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Font Awesome 6 Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Animate CSS Link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- fancybox image gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+	<link href="../public/assets/css/style.css" rel="stylesheet">
+</head>
+<body> 
+
+	<!-- Preloader -->
+    <div class="preloader">
+        <div>
+            <img src="../public/assets/images/logo/Logo.png" class="max-w-[300px]" alt="Logo">
+            <div class="custom-loader mx-auto"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 w-full" id="navbar">
+        <nav class="d2c_navbar">
+            <div class="mr-auto flex justify-between items-center gap-3 lg:gap-6">
+                <div class="flex items-center gap-4 justify-between md:justify-baseline flex-wrap w-full container">
+                    <div class="md:mr-5">
+                        <a href="../index.html" id="home-link">
+                            <img src="../public/assets/images/logo/logo.png" class="d2c_logo" alt="StyleForm logo">
+                        </a>
+                    </div>
+    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex space-x-10 d2c_navigation ml-auto" id="d2c_nav_link_wrapper">
+                        <a href="../index.html" class="nav_link nav_link_Small">Home</a>
+                        <a href="./about.html" class="nav_link nav_link_Small">About</a>
+                        <a href="./gallery.html" class="nav_link nav_link_Small active">Gallery</a>
+                        <a href="./blog.html" class="nav_link nav_link_Small">Blog</a>
+                    </div>
+
+                    <div class="hidden md:block ml-auto lg:ml-5">
+                        <a href="./contact.html" class="d2c_btn">
+                            Contact
+                        </a>
+                    </div>
+
+                    <!-- Mobile and Tablet Menu Button -->
+                    <div class="lg:hidden flex items-center">
+                        <button id="mobile-menu-btn" class="d2c_navigation">
+                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+    
+        <!-- Mobile and Tablet Navigation Drawer -->
+        <div id="mobile-menu" class="hidden bg-primary absolute right-3 left-3 z-50 top-2 border rounded border-primary">
+            <div class="block lg:hidden p-6 pt-4 w-full">
+                <div class="flex justify-end items-center">
+                    <button id="close-drawer-btn" class="text-light-blue focus:outline-none rounded">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Mobile Navigation Links -->
+                <div id="mobile-nav-links" class="mt-2 grid grid-cols-2 md:grid-cols-4 gap-1 gap-x-4"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Moments capture gallery start -->
+    <section>
+        <div class="container space-y-10 lg:space-y-16">
+            <h2 class="d2c_section_title text-center">Capture moments</h2>
+            <div class="grid grid-cols-4 md:grid-rows-5 gap-6 h-[400px] md:h-[800px] xl:h-[1400px]">
+                <!-- 1 -->
+                <div class="col-span-2 row-span-2 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-12.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-12.jpg');">
+					</a>
+                </div>
+                <!-- 2 -->
+                <div class="col-span-1 row-span-2 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-13.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-13.jpg');">
+					</a>
+                </div>
+                <!-- 3 -->
+                <div class="col-span-1 row-span-1 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-14.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-14.jpg');">
+					</a>
+                </div>
+                <!-- 4 -->
+                <div class="col-span-1 row-span-1 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-15.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-15.jpg');">
+					</a>
+                </div>
+                <!-- 5 -->
+                <div class="col-span-1 row-span-1 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-16.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-16.jpg');">
+					</a>
+                </div>
+                <!-- 6 -->
+                <div class="col-span-2 row-span-1 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-17.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-17.jpg');">
+					</a>
+                </div>
+                <!-- 7 -->
+                <div class="col-span-1 row-span-2 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-18.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-18.jpg');">
+					</a>
+                </div>
+                <!-- 8 -->
+                <div class="col-span-3 row-span-2 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-19.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-19.jpg');">
+					</a>
+                </div>
+                <!-- 9 -->
+                <div class="col-span-1 row-span-1 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-20.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-20.jpg');">
+					</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Moments capture gallery end -->
+
+    <!-- Fashion capture gallery start -->
+    <section class="pt-5">
+        <div class="container space-y-10 lg:space-y-16">
+            <h2 class="d2c_section_title text-center">Fashion capture</h2>
+            
+            <div class="grid grid-cols-4 grid-rows-4 gap-6 h-[300px] md:h-[500px] xl:h-[1000px]">
+                <!-- 1 -->
+                <div class="col-span-2 row-span-2 xl:max-w-[83%] shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-21.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-21.jpg');">
+					</a>
+                </div>
+                <!-- 2 -->
+                <div class="col-span-2 row-span-2 shadow-gallery-image xl:w-[calc(100%+100px)] xl:-ml-[100px]">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-22.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-22.jpg');">
+					</a>
+                </div>
+                <!-- 3 -->
+                <div class="col-span-1 row-span-1 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-23.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-23.jpg');">
+					</a>
+                </div>
+                <!-- 4 -->
+                <div class="col-span-1 row-span-2 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-25.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-25.jpg');">
+					</a>
+                </div>
+                <!-- 5 -->
+                <div class="col-span-1 row-span-2 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-26.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-26.jpg');">
+					</a>
+                </div>
+                <!-- 6 -->
+                <div class="col-span-1 row-span-1 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-27.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-27.jpg');">
+					</a>
+                </div>
+                <!-- 7 -->
+                <div class="col-span-1 row-span-1 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-24.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-24.jpg');">
+					</a>
+                </div>
+                <!-- 8 -->
+                <div class="col-span-1 row-span-1 shadow-gallery-image">
+                    <a data-fancybox="gallery" class="w-full h-full object-cover rounded block bg-cover bg-no-repeat" 
+						href="../public/assets/images/gallery-image/Gallery-Image-28.jpg" style="background-image: url('../public/assets/images/gallery-image/Gallery-Image-28.jpg');">
+					</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fashion capture gallery end -->
+
+    <section class="pt-5">
+        <div class="container space-y-10 lg:space-y-16" data-aos="fade-up">
+            <h2 class="d2c_section_title text-center">unique & Immersive works</h2>
+
+            <!-- video wrapper -->
+            <div id="videoContainer" class="video-container rounded-lg h-[300px] md:h-[400px] xl:h-[650px] shadow-4">
+                <iframe id="video1" class="video-iframe rounded-lg w-full h-full border-0 hidden object-cover" src="https://www.youtube.com/embed/PbHg0CsRHhQ?si=L-cwATMYEehYn92I" allowfullscreen></iframe>
+                <img id="thumbnail1" class="rounded-lg cursor-pointer h-full w-full object-cover" src="../public/assets/images/Video-thumbnail-1.jpg" alt="Custom Thumbnail">
+                <div id="playButton1" class="play-button"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section start -->
+    <footer>
+        <div class="border-y border-white/15">
+            <div class="container">
+                <div class="grid grid-cols-12 gap-6 lg:gap-10 md:divide-x md:divide-white/15">
+                    <div class="col-start-1 col-span-12 md:col-span-6 space-y-5 d2c_footer_content pb-0 md:py-10 lg:py-14 md:pr-10">
+                        <a href="../index.html" class="inline-flex justify-center md:justify-start w-full md:w-fit">
+                            <img src="../public/assets/images/logo/footer-logo.png" class="d2c_footer_logo" alt="Logo">
+                        </a>
+                        <p class="d2c_description no-animation">Stay up to date on the latest features & releases by joining our newsletter</p>
+                        <form class="mt-3 md:mt-6 space-y-3 md:space-y-8">
+                            <div>
+                                <input type="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+            
+                            <!-- submit input -->
+                            <button type="submit" class="d2c_btn mt-4 w-full md:w-fit">
+                                send now
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-start-1 col-span-6 md:col-start-7 md:col-span-3 space-y-6 md:space-y-12 xl:space-y-20 d2c_footer_content ">
+                        <h3 class="d2c_footer_title no-animation">Content</h3>
+                        <ul class="list-none list-outside space-y-2">
+                            <li>
+                                <a href="../pages/about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="../pages/gallery.html">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="../pages/blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a href="../pages/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-start-7 col-span-6 md:col-start-10 md:col-span-3 space-y-6 md:space-y-12 xl:space-y-20 d2c_footer_content ">
+                        <h3 class="d2c_footer_title no-animation">Follow</h3>
+                        <ul class="list-none list-outside space-y-2">
+                            <li>
+                                <a href="#">X</a>
+                            </li>
+                            <li>
+                                <a href="#">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#">Youtube</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Copyright -->
+            <p class="py-4 text-center text-shadow-1 no-animation">All rights reserved <span class="font-bold">by DesignToCodes</span></p>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+     
+     <!-- bottom to scroll button -->
+    <div id="scrollBtn">
+        <a href="#" class="d2c_scroll_btn">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+    </div>
+
+	<!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- fancybox Image -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<!-- swiperjs cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Main Js File Link -->
+    <script src="../public/assets/js/main.js"></script>
+
+</body>
+</html>
+
+<!-- 
+Template Name: {{ # }}
+Template URL: {{ # }}
+Description: {{ # }}
+Author: DesignToCodes
+Author URL: https://www.designtocodes.com
+Text Domain: {{ # }} 
+-->

@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="og:description" content="#">
+    <meta name="og:title" property="og:title" content="#">
+    <meta property="og:image" content="#">
+    <link rel="icon" href="./public/assets/images/logo/favicon.png" type="image/gif" sizes="16x16">
+    <title>Styleform - Beauty Fashion Template</title>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Animate CSS Link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- fancybox image gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+	<!-- Font Awesome 6 Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link href="./public/assets/css/style.css" rel="stylesheet">
+</head>
+<body> 
+
+	<!-- Preloader -->
+    <div class="preloader h-full fixed w-full z-50 bg-primary transition duration-300 flex items-center justify-center">
+        <div>
+            <img src="./public/assets/images/logo/Logo.png" class="max-w-[300px]" alt="Logo">
+            <div class="custom-loader mx-auto"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 w-full" id="navbar">
+        <nav class="d2c_navbar">
+            <div class="mr-auto flex justify-between items-center gap-3 lg:gap-6">
+                <div class="flex items-center gap-4 justify-between md:justify-baseline flex-wrap w-full container">
+                    <div class="md:mr-5">
+                        <a href="./index.html" id="home-link">
+                            <img src="./public/assets/images/logo/logo.png" class="max-w-[235px] xl:max-w-[235px] [filter:drop-shadow(0px_12px_4px_#1F51BE)_drop-shadow(0px_-10px_2px_rgba(255,255,255,0.13))]" alt="StyleForm logo">
+                        </a>
+                    </div>
+    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex space-x-10 d2c_navigation ml-auto" id="d2c_nav_link_wrapper">
+                        <a href="./index.html" class="nav_link nav_link_Small active">Home</a>
+                        <a href="./pages/about.html" class="nav_link nav_link_Small">About</a>
+                        <a href="./pages/gallery.html" class="nav_link nav_link_Small">Gallery</a>
+                        <a href="./pages/blog.html" class="nav_link nav_link_Small">Blog</a>
+                    </div>
+
+                    <div class="hidden md:block ml-auto lg:ml-5">
+                        <a href="./pages/contact.html" class="d2c_btn">
+                            Contact
+                        </a>
+                    </div>
+
+                    <!-- Mobile and Tablet Menu Button -->
+                    <div class="lg:hidden flex items-center">
+                        <button id="mobile-menu-btn" class="text-light-blue border-light-blue focus:outline-none transition-all duration-500 d2c_navigation">
+                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+    
+        <!-- Mobile and Tablet Navigation Drawer -->
+        <div id="mobile-menu" class="hidden bg-primary absolute right-3 left-3 z-50 top-2 border rounded border-primary">
+            <div class="block lg:hidden p-6 pt-4 w-full">
+                <div class="flex justify-end items-center">
+                    <button id="close-drawer-btn" class="text-light-blue focus:outline-none rounded">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Mobile Navigation Links -->
+                <div id="mobile-nav-links" class="mt-2 grid grid-cols-2 md:grid-cols-4 gap-1 gap-x-4"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+
+	<!-- Hero section start -->
+	<section class="pb-32 md:pb-40 xl:pb-60 2xl:pb-80 bg-hero">
+		<div class="container">
+			<div class="text-center space-y-4">
+				<h1 class="d2c_section_title">unlock your style</h1>
+				<p class="capitalize text-lg md:text-xl lg:text-2xl xl:text-3xl-1 w-[90%] mx-auto md:w-full">Pre-Existing Ideas and manifest unique concepts</p>
+				<div class="pt-10 md:pt-24" data-aos="fade-up">
+					<img src="./public/assets/images/Hero-Model-Image.png" class="filter-custom-2-mobile md:filter-custom-2" alt="Model Image">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+
+	<!-- Image slider -->
+	 <div class="lg:pb-28 -mt-20 md:-mt-24 lg:-mt-24 xl:-mt-40 2xl:-mt-60">
+		<div>
+			<div class="swiper d2c_image_slider py-6 md:py-16 relative">
+				<div class="swiper-wrapper"> 
+					<div class="swiper-slide">
+						<img src="./public/assets/images/hero-slider-image-1.jpg" data-aos="fade-up" data-aos-delay="100" alt="Model Image">
+					</div>
+					<div class="swiper-slide">
+						<img src="./public/assets/images/hero-slider-image-2.jpg" data-aos="fade-up" data-aos-delay="200" alt="Model Image">
+					</div>
+					<div class="swiper-slide">
+						<img src="./public/assets/images/hero-slider-image-3.jpg" data-aos="fade-up" data-aos-delay="300" alt="Model Image">
+					</div>
+					<div class="swiper-slide">
+						<img src="./public/assets/images/hero-slider-image-4.jpg" data-aos="fade-up" data-aos-delay="400" alt="Model Image">
+					</div>
+					<div class="swiper-slide">
+						<img src="./public/assets/images/hero-slider-image-5.jpg" data-aos="fade-up" data-aos-delay="500" alt="Model Image">
+					</div>
+					<div class="swiper-slide">
+						<img src="./public/assets/images/hero-slider-image-2.jpg" data-aos="fade-up" data-aos-delay="600" alt="Model Image">
+					</div>
+					<div class="swiper-slide">
+						<img src="./public/assets/images/hero-slider-image-2.jpg" data-aos="fade-up" data-aos-delay="200" alt="Model Image">
+					</div>
+					<div class="swiper-slide">
+						<img src="./public/assets/images/hero-slider-image-3.jpg" data-aos="fade-up" data-aos-delay="300" alt="Model Image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- About section start -->
+	<section>
+		<div class="container">
+			<div class="grid lg:grid-cols-2 gap-5 items-center">
+				<div class="space-y-6 pr-5">
+					<h2 class="d2c_section_title no-animation">styleform about</h2>
+					<p>Welcome Styleform, where fashion meets artistry. Here, each design tells a story of innovation, elegance, and individuality.</p>
+					<p>Styleform, we believe in crafting pieces that resonate with timeless beauty while embracing contemporary trends. Our journey is fuelled by passion, precision, & vision redefine style.</p>
+
+					<div class="flex gap-5">
+						<div>
+							<div class="d2c_small_rounded_shape filter-custom-4"></div>
+						</div>
+						<div>
+							<h4 class="text-shadow-5 text-xl font-bold leading-none mb-2">Design Philosophy</h4>
+							<p>Styleform celebrates the fusion of art and fashion, blending modern trends with timeless elegance.</p>
+						</div>
+					</div>
+
+					<div class="flex gap-5">
+						<div>
+							<div class="d2c_small_rounded_shape filter-custom-4"></div>
+						</div>
+						<div>
+							<h4 class="text-shadow-5 text-xl font-bold leading-none mb-2">Design Philosophy</h4>
+							<p>Styleform celebrates the fusion of art and fashion, blending modern trends with timeless elegance.</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="bg-about bg-cover bg-no-repeat rounded-[40px] flex justify-center pt-20">
+					<img src="./public/assets/images/about-couple-blue.png" class="filter-custom-3" data-aos="fade-in" alt="Couple Model">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- About section end -->
+
+	<!-- Amazing Things section start -->
+	 <section>
+		<div class="container space-y-10 lg:space-y-16">
+			<h2 class="d2c_section_title text-center">Get Amazing things</h2>
+			<div class="grid grid-cols-12 gap-6 xl:gap-10 space-y-6 md:space-y-0">
+				<div class="col-start-1 col-span-12 md:col-span-6 lg:col-span-4 space-y-3" data-aos="fade-up">
+					<!-- icon wrapper -->
+					<div class="flex items-center gap-8 mb-8">
+						<div>
+							<div class="w-[80px] h-[80px] lg:w-14 lg:h-14 xl:w-[112px] xl:h-[112px] rounded-md bg-white shadow-1 flex items-center justify-center p-4 lg:p-3 xl:p-4">
+								<img src="./public/assets/images/Camera-Icon.png" class="filter-7 " alt="Camera">
+							</div>
+						</div>
+						<div>
+							<h3 class="d2c_section_sub_title">Photo Shooting</h3>
+						</div>
+					</div>
+					<p>Where fashions meets artistry. Here, each design tells a story of innovation, elegance, and individuality.</p>
+					<p>Where fashions meets artistry. Here, each design tells a story of innovation</p>
+					<!-- bottom liner -->
+					<img src="./public/assets/images/End-Line.png" class="w-full" alt="End Line">
+				</div>
+
+				<div class="col-start-1 col-span-12 md:col-start-7 md:col-span-6 lg:col-start-5 lg:col-span-4 space-y-3" data-aos="fade-up">
+					<!-- icon wrapper -->
+					<div class="flex items-center gap-8 mb-8">
+						<div>
+							<div class="w-[80px] h-[80px] lg:w-14 lg:h-14 xl:w-[112px] xl:h-[112px] rounded-md bg-white shadow-1 flex items-center justify-center p-4 lg:p-3 xl:p-4">
+								<img src="./public/assets/images/Idea-Icon.png" class="filter-7" alt="Idea Icon">
+							</div>
+						</div>
+						<div>
+							<h3 class="d2c_section_sub_title">Photo Concept</h3>
+						</div>
+					</div>
+					<p>From timeless classics to bold trends, style evolves with every season, shaping the way we express.</p>
+					<p>Whether it's the elegance of a tailored suit, the effortless charm of street wear</p>
+					<!-- bottom liner -->
+					<img src="./public/assets/images/End-Line.png" class="w-full" alt="End Line">
+				</div>
+
+				<div class="col-start-1 col-span-12 md:col-start-4 md:col-span-6 lg:col-start-9 lg:col-span-4 space-y-3" data-aos="fade-up">
+					<!-- icon wrapper -->
+					<div class="flex items-center gap-8 mb-8">
+						<div>
+							<div class="w-[80px] h-[80px] lg:w-14 lg:h-14 xl:w-[112px] xl:h-[112px] rounded-md bg-white shadow-1 flex items-center justify-center p-4 lg:p-3 xl:p-4">
+								<img src="./public/assets/images/Event-Icon.png" class="filter-7" alt="Event Icon">
+							</div>
+						</div>
+						<div>
+							<h3 class="d2c_section_sub_title">Branding event</h3>
+						</div>
+					</div>
+					<p>Fashion is more than just clothing; it's a statement, a reflection of personality, culture, and creativity.</p>
+					<p>Where fashions meets artistry. Here, each design tells a story of innovation</p>
+					<!-- bottom liner -->
+					<img src="./public/assets/images/End-Line.png" class="w-full" alt="End Line">
+				</div>
+			</div>
+		</div>
+	 </section>
+	<!-- Amazing Things section end -->
+
+	<!-- Call to action section start -->
+	 <section class="p-5">
+		<div class="bg-white/10 rounded-[10px] shadow-4 pt-20 max-w-full xl:max-w-[1460px] mx-auto" data-aos="fade-up">
+			<div class="container">
+				<div class="grid grid-cols-12 gap-6 items-center">
+					<div class="col-start-1 col-span-12 md:col-span-7 space-y-4 pb-20 text-center md:text-left">
+						<h2 class="d2c_section_title">Do You want to be a Model?</h2>
+						<p>Where fashions meets artistry. Here, each design tells a story of innovation, elegance, and individuality.</p>
+						<a href="#" class="d2c_btn mt-6">
+							Contact us
+						</a>
+					</div>
+	
+					<div class="col-start-1 col-span-12 md:col-start-8 md:col-span-5 flex justify-end h-full">
+						<img src="./public/assets/images/CTA-model-image.png" class="filter-6" alt="Model Image">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	 </section>
+	<!-- Call to action section End -->
+
+	<!-- Gallery section start -->
+	<section>
+		<div class="container space-y-10 lg:space-y-16">
+			<h2 class="d2c_section_title text-center">Gallery</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-4 xl:gap-6">
+				<!-- first column -->
+				<div class="space-y-4 xl:space-y-6">
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[165px] lg:h-[240px] bg-cover bg-center bg-no-repeat transition-all mix-blend-luminosity" 
+							href="./public/assets/images/gallery-image/Gallery-Image-1.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-1.jpg');">
+						</a>
+					</div>
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[165px] lg:h-[270px] bg-cover bg-center bg-no-repeat transition-all" 
+							href="./public/assets/images/gallery-image/Gallery-Image-5.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-5.jpg');">
+						</a>
+					</div>
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[165px] lg:h-[250px] bg-cover bg-center bg-no-repeat transition-all" href="./public/assets/images/gallery-image/Gallery-Image-6.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-6.jpg');">
+						</a>
+					</div>
+				</div>
+				<!-- second column -->
+				<div class="space-y-4 xl:space-y-6">
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[255px] lg:h-[449px] bg-cover bg-center bg-no-repeat transition-all shadow-gallery-image mix-blend-luminosity" href="./public/assets/images/gallery-image/Gallery-Image-2.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-2.jpg');">
+						</a>
+					</div>
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[255px] lg:h-[335px] bg-cover bg-center bg-no-repeat transition-all 	shadow-gallery-image mix-blend-luminosity" href="./public/assets/images/gallery-image/Gallery-Image-7.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-7.jpg');">
+						</a>
+					</div>
+				</div>
+				<!-- 3rd column -->
+				<div class="space-y-4 xl:space-y-6">
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[255px] lg:h-[335px] bg-cover bg-center bg-no-repeat transition-all 	shadow-gallery-image mix-blend-luminosity" href="./public/assets/images/gallery-image/Gallery-Image-3.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-3.jpg');">
+						</a>
+					</div>
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[255px] lg:h-[449px] bg-cover bg-center bg-no-repeat transition-all 	shadow-gallery-image mix-blend-luminosity" href="./public/assets/images/gallery-image/Gallery-Image-8.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-8.jpg');">
+						</a>
+					</div>
+				</div>
+				<!-- Fourth column -->
+				<div class="space-y-4 xl:space-y-6">
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[120px] lg:h-[184px] bg-cover bg-center bg-no-repeat transition-all 	shadow-gallery-image mix-blend-luminosity" href="./public/assets/images/gallery-image/Gallery-Image-4.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-4.jpg');">
+						</a>
+					</div>
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[120px] lg:h-[184px] bg-cover bg-center bg-no-repeat transition-all 	shadow-gallery-image mix-blend-luminosity" href="./public/assets/images/gallery-image/Gallery-Image-9.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-9.jpg');">
+						</a>
+					</div>
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[120px] lg:h-[184px] bg-cover bg-center bg-no-repeat transition-all 	shadow-gallery-image mix-blend-luminosity" href="./public/assets/images/gallery-image/Gallery-Image-10.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-10.jpg');">
+						</a>
+					</div>
+					<div class="shadow-gallery-image">
+						<a data-fancybox="gallery" class="block w-full h-[250px] md:h-[120px] lg:h-[184px] bg-cover bg-center bg-no-repeat transition-all 	shadow-gallery-image mix-blend-luminosity" href="./public/assets/images/gallery-image/Gallery-Image-11.jpg" style="background-image: url('./public/assets/images/gallery-image/Gallery-Image-11.jpg');">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Gallery section End -->
+
+	<!-- Spotlight section start -->
+	<section>
+		<div class="container space-y-10 lg:space-y-16">
+			<h2 class="d2c_section_title text-center">In the Spotlight</h2>
+
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-6 items-center">
+				<div class="space-y-4 text-center md:text-left">
+					<h3 class="d2c_section_sub_title mb-10">Styleform redefines elegance through innovation</h3>
+					<p>This tagline reflects Styleform's identity as a brand that merges timeless elegance with cutting-edge design techniques.</p>
+					<p>It suggests a commitment to pushing boundaries in fashion while maintaining a sophisticated aesthetic.</p>
+				</div>
+
+				<div class="shadow-4 rounded-lg" data-aos="fade-up">
+					<!-- video wrapper -->
+					<div id="videoContainer" class="video-container rounded-lg h-[300px] md:h-[450px]">
+						<iframe id="video1" class="video-iframe rounded-lg w-full h-full border-0 hidden object-cover" src="https://www.youtube.com/embed/PbHg0CsRHhQ?si=L-cwATMYEehYn92I" allowfullscreen></iframe>
+						<img id="thumbnail1" class="rounded-lg cursor-pointer h-[300px] md:h-[450px] w-full object-cover" src="./public/assets/images/Video-thumbnail.jpg" alt="Custom Thumbnail">
+						<div id="playButton1" class="play-button"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Spotlight section end -->
+
+	<!-- Featured section start -->
+	<section>
+		<div class="container space-y-10 lg:space-y-16">
+			<h2 class="d2c_section_sub_title text-center">Honors Styleform received</h2>
+
+			<div class="d2c_awards_wrapper">
+				<div class="d2c_award_card">
+					<img src="./public/assets/images/Award-Icon-1.png" class="d2c_award_icon max-w-[114px] mx-auto" alt="Award Icon">
+					<h4 class="d2c_award_card_title">Best Emerging Designer 2024 Fashion Critics Awards</h4>
+				</div>
+
+				<div class="d2c_award_card">
+					<img src="./public/assets/images/Award-Icon-2.png" class="d2c_award_icon max-w-[114px] mx-auto" alt="Award Icon">
+					<h4 class="d2c_award_card_title">Featured in Top 10 Designers of the Year – Elle</h4>
+				</div>
+
+				<div class="d2c_award_card">
+					<img src="./public/assets/images/Award-Icon-3.png" class="d2c_award_icon max-w-[114px] mx-auto" alt="Award Icon">
+					<h4 class="d2c_award_card_title">Winner of Sustainable Fashion Design Award</h4>
+				</div>
+
+				<div class="d2c_award_card">
+					<img src="./public/assets/images/Award-Icon-4.png" class="d2c_award_icon max-w-[114px] mx-auto" alt="Award Icon">
+					<h4 class="d2c_award_card_title">Sustainable Fashion Pioneer Green Threads Awards</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Featured section end -->
+
+	<!-- Logo Slider -->
+	<section class="space-y-16">
+		<div class="container">
+			<h2 class="d2c_section_sub_title text-center lg:w-[90%] xl:w-[80%] mx-auto">partnerships with notable brands influencer, or institutions</h2>
+		</div>
+		<div>
+			<div class="swiper d2c_logo_slider py-6 md:py-16 relative">
+				<div class="swiper-wrapper"> 
+					<div class="swiper-slide py-4 lg:py-6 xl:py-10">
+						<div class="d2c_logo_wrapper shadow-4">
+							<img src="./public/assets/images/company-logo/Calvin-Klein.png" class="max-h-[53px]" alt="CK Logo">
+						</div>
+					</div>
+
+					<div class="swiper-slide py-4 lg:py-6 xl:py-10">
+						<div class="d2c_logo_wrapper shadow-4">
+							<img src="./public/assets/images/company-logo/Ralph-Lauren.png" class="max-h-[53px]" alt="Ralph Lauren Logo">
+						</div>
+					</div>
+
+					<div class="swiper-slide py-4 lg:py-6 xl:py-10">
+						<div class="d2c_logo_wrapper shadow-4">
+							<img src="./public/assets/images/company-logo/ZARA.png" class="max-h-[53px]" alt="ZARA Logo">
+						</div>
+					</div>
+
+					<div class="swiper-slide py-4 lg:py-6 xl:py-10">
+						<div class="d2c_logo_wrapper shadow-4">
+							<img src="./public/assets/images/company-logo/Adidas.png" class="max-h-[53px]" alt="Adidas Logo">
+						</div>
+					</div>
+
+					<div class="swiper-slide py-4 lg:py-6 xl:py-10">
+						<div class="d2c_logo_wrapper shadow-4">
+							<img src="./public/assets/images/company-logo/Valentino.png" class="max-h-[53px]" alt="Valentino Logo">
+						</div>
+					</div>
+
+					<div class="swiper-slide py-4 lg:py-6 xl:py-10">
+						<div class="d2c_logo_wrapper shadow-4">
+							<img src="./public/assets/images/company-logo/Bvlgari.png" class="max-h-[53px]" alt="Bvlgari Logo">
+						</div>
+					</div>
+
+					<div class="swiper-slide py-4 lg:py-6 xl:py-10">
+						<div class="d2c_logo_wrapper shadow-4">
+							<img src="./public/assets/images/company-logo/ZARA.png" class="max-h-[53px]" alt="ZARA Logo">
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to action 1 section start -->
+	<section class="p-5">
+		<div class="bg-cta-1 bg-white/10 rounded-[10px] shadow-4 max-w-[1460px] mx-auto">
+			<div class="container">
+				<div class="py-20 space-y-5 text-center">
+					<h2 class="d2c_section_title">Do you want to be our partner?</h2>
+					<p>Where fashions meets artistry. Here, each design tells a story of innovation, elegance, and individuality.</p>
+					<a href="#" class="d2c_btn mt-6">
+						Contact us
+					</a>
+				</div>
+			</div>
+			
+		</div>
+	 </section>
+	<!-- Call to action 1 section End -->
+
+	<!-- Testimonial section start -->
+	<section>
+		<div class="container space-y-10 lg:space-y-16">
+			<h2 class="d2c_section_title md:w-[90%] xl:w-[80%] mx-auto text-center">their thoughts about us</h2>
+
+			<!-- Quotation left -->
+			<div class="-mb-4">
+				<img src="./public/assets/images/quotation-left.png" class="[filter:drop-shadow(0px_8px_7px_#4D61C8)_drop-shadow(0px_-8px_4px_#ffffff21)]" alt="Quotation mark">
+			</div>
+			<div class="swiper d2c_testimonial_slider py-6 md:py-16 max-w-full md:max-w-[90%] xl:max-w-[80%] 2xl:max-w-[70%] relative">
+				<div class="swiper-wrapper"> 
+					<div class="swiper-slide">
+						<div class="space-y-4 text-center pt-4 w-full mx-auto">
+							<img src="./public/assets/images/adidas.png" class="max-w-[147px] mx-auto d2c_logo_shadow inline-block mb-6" alt="Adidas Logo">
+							<div class="w-[300px] h-0.5 bg-liner shadow-liner mx-auto"></div>
+							<p class="py-3">Styleform took our brand to the next level. The attention to detail and creative insight they brought to the project was truly remarkable.</p>
+							<div class="w-[120px] h-0.5 bg-liner shadow-liner mx-auto"></div>
+							<h5 class="d2c_client_name">James T., Brand Strategist</h5>
+						</div>
+					</div>
+					  
+					<div class="swiper-slide">
+						<div class="space-y-4 text-center pt-4 w-full mx-auto">
+							<img src="./public/assets/images/company-logo/Bvlgari.png" class="max-w-[147px] mx-auto d2c_logo_shadow inline-block mb-6" alt="Bvlgari Logo">
+							<div class="w-[300px] h-0.5 bg-liner shadow-liner mx-auto"></div>
+							<p class="py-3">Their design language resonated perfectly with our identity. It's rare to find a partner that blends aesthetics with user experience so seamlessly.</p>
+							<div class="w-[120px] h-0.5 bg-liner shadow-liner mx-auto"></div>
+							<h5 class="d2c_client_name">Emily R., UX Lead</h5>
+						</div>
+					</div>
+					  
+					<div class="swiper-slide">
+						<div class="space-y-4 text-center pt-4 w-full mx-auto">
+							<img src="./public/assets/images/company-logo/Calvin-Klein.png" class="max-w-[147px] mx-auto d2c_logo_shadow inline-block mb-6" alt="Calvin-Klein Logo">
+							<div class="w-[300px] h-0.5 bg-liner shadow-liner mx-auto"></div>
+							<p class="py-3">From discovery to delivery, Styleform demonstrated professionalism and creativity. We couldn’t be happier with the results.</p>
+							<div class="w-[120px] h-0.5 bg-liner shadow-liner mx-auto"></div>
+							<h5 class="d2c_client_name">Liam N., Marketing Director</h5>
+						</div>
+					</div>
+					  
+					
+				</div>
+			</div>
+			<!-- Quotation right -->
+			<div class="flex justify-end -mt-8">
+				<img src="./public/assets/images/quotation-right.png" class="[filter:drop-shadow(0px_8px_7px_#4D61C8)_drop-shadow(0px_-8px_4px_#ffffff21)]" alt="Quotation mark">
+			</div>
+		</div>
+	</section>
+	<!-- Testimonial section start -->
+
+	<!-- Blog Section start -->
+	<section class="py-10 md:py-20">
+		<div class="container space-y-10 lg:space-y-16">
+			<h2 class="d2c_section_title text-center">Blog & Articles</h2>
+			<div class="grid grid-cols-12 gap-6">
+				<div class="col-start-1 col-span-12 md:col-span-6 lg:col-span-4">
+					<a href="./pages/blog_details.html" class="block space-y-7">
+						<div class="shadow-blog-image">
+							<img src="./public/assets/images/post-image-1.jpg" class="mix-blend-luminosity" alt="Post Image">
+						</div>
+						<h5 class="d2c_blog_title">The Chaotic & Creative Process of Fashion Photography</h5>
+					</a>
+				</div>
+				<div class="col-start-1 col-span-12 md:col-start-7 md:col-span-6 lg:col-start-5 lg:col-span-4">
+					<a href="./pages/blog_details.html" class="block space-y-7">
+						<div class="shadow-blog-image">
+							<img src="./public/assets/images/post-image-2.jpg" class="mix-blend-luminosity" alt="Post Image">
+						</div>
+						<h5 class="d2c_blog_title">Rent Jean Legacy's transform your interiors</h5>
+					</a>
+				</div>
+				<div class="col-start-1 col-span-12 md:col-start-4 md:col-span-6 lg:col-start-9 lg:col-span-4">
+					<a href="./pages/blog_details.html" class="block space-y-7">
+						<div class="shadow-blog-image">
+							<img src="./public/assets/images/post-image-3.jpg" class="mix-blend-luminosity" alt="Post Image">
+						</div>
+						<h5 class="d2c_blog_title">How Fashion Translates Trends to the Masses</h5>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Blog Section end -->
+
+	<!-- Contact section start -->
+	<section>
+		<div class="container space-y-10 lg:space-y-16">
+			<h2 class="d2c_section_title text-center">Let's <br> Work Together</h2>
+
+			<div class="grid grid-cols-12 gap-4 md:gap-6 bg-white/10 py-8 md:py-20 px-5 md:px-14 rounded-lg shadow-4" data-aos="fade-up">
+				<div class="col-start-1 col-span-12 lg:col-span-8">
+					<h3 class="d2c_section_sub_title">contact us</h3>
+					<form class="mt-6 space-y-3 md:space-y-6 xl:space-y-8">
+                        <div>
+                            <input type="text" class="form-control" placeholder="Enter your name" required>
+                        </div>
+        
+                        <div class="grid grid-cols-1 gap-3 md:gap-6 xl:gap-8 sm:grid-cols-6">
+                            <div class="sm:col-span-3">
+                                <div>
+                                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                            <div class="sm:col-span-3">
+                                <div>
+                                    <input type="tel" class="form-control" placeholder="Enter your number" required>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <textarea rows="4" class="form-control" placeholder="Enter your message"></textarea>
+                        </div>
+        
+                        <!-- submit input -->
+                        <button type="submit" class="d2c_btn w-full md:w-fit mt-4">
+                            send now
+                        </button>
+                    </form>
+				</div>
+				<div class="col-start-1 col-span-12 lg:col-start-9 lg:col-span-4 space-y-6 xl:pl-10 text-center md:text-left">
+					<h3 class="d2c_section_sub_title mt-6 lg:mt-0">Scan now</h3>
+					<div class="p-5 border border-white/15 rounded-md max-w-[300px] max-h-[300px]">
+						<img src="./public/assets/images/qr-code.png" alt="QR Code">
+					</div>
+					<h4 class="font-medium font-primary text-lg lg:text-xl text-shadow-2">Contact & call directly</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Contact section end -->
+
+	<!-- Footer section start -->
+    <footer>
+        <div class="border-y border-white/15">
+            <div class="container">
+                <div class="grid grid-cols-12 gap-6 lg:gap-10 md:divide-x md:divide-white/15">
+                    <div class="col-start-1 col-span-12 md:col-span-6 space-y-5 d2c_footer_content pb-0 md:py-10 lg:py-14 md:pr-10">
+                        <a href="./index.html" class="inline-flex justify-center md:justify-start w-full md:w-fit">
+                            <img src="./public/assets/images/logo/footer-logo.png" class="d2c_footer_logo" alt="Logo">
+                        </a>
+                        <p class="d2c_description no-animation">Stay up to date on the latest features & releases by joining our newsletter</p>
+                        <form class="mt-3 md:mt-6 space-y-3 md:space-y-8">
+                            <div>
+                                <input type="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+            
+                            <!-- submit input -->
+                            <button type="submit" class="d2c_btn mt-4 w-full md:w-fit">
+                                send now
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-start-1 col-span-6 md:col-start-7 md:col-span-3 space-y-6 md:space-y-12 xl:space-y-20 d2c_footer_content ">
+                        <h3 class="d2c_footer_title no-animation">Content</h3>
+                        <ul class="list-none list-outside space-y-2">
+                            <li>
+                                <a href="./pages/about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="./pages/gallery.html">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="./pages/blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a href="./pages/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-start-7 col-span-6 md:col-start-10 md:col-span-3 space-y-6 md:space-y-12 xl:space-y-20 d2c_footer_content ">
+                        <h3 class="d2c_footer_title no-animation">Follow</h3>
+                        <ul class="list-none list-outside space-y-2">
+                            <li>
+                                <a href="#">X</a>
+                            </li>
+                            <li>
+                                <a href="#">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#">Youtube</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Copyright -->
+            <p class="py-4 text-center text-shadow-1 no-animation">All rights reserved <span class="font-bold">by DesignToCodes</span></p>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+
+	<!-- bottom to scroll button -->
+    <div id="scrollBtn">
+        <a href="#" class="d2c_scroll_btn">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+    </div>
+
+	<!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- fancybox Image -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<!-- swiperjs cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- video js -->
+	 <script src="./public/assets/js/video.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Main Js File Link -->
+    <script src="./public/assets/js/main.js"></script>
+
+</body>
+</html>
+
+<!-- 
+Template Name: {{ # }}
+Template URL: {{ # }}
+Description: {{ # }}
+Author: DesignToCodes
+Author URL: https://www.designtocodes.com
+Text Domain: {{ # }} 
+-->
