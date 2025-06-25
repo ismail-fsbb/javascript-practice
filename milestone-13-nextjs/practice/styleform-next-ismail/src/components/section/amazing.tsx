@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 
-import amazingImage1 from "@/public/assets/images/Camera-Icon.png";
-import amazingImage2 from "@/public/assets/images/End-Line.png";
-import amazingImage3 from "@/public/assets/images/Idea-Icon.png";
-import amazingImage4 from "@/public/assets/images/Event-Icon.png";
+import amazingImage1 from "@/assets/images/Camera-Icon.png";
+import amazingImage2 from "@/assets/images/End-Line.png";
+import amazingImage3 from "@/assets/images/Idea-Icon.png";
+import amazingImage4 from "@/assets/images/Event-Icon.png";
 
 export default function Amazing() {
 	const amazingContents = [

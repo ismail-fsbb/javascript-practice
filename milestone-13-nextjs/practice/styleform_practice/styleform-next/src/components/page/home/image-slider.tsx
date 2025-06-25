@@ -29,7 +29,7 @@ const imageSliderImages = [
     {
         image: heroSlider4.src,
     },
-    {
+    {   
         image: heroSlider5.src,
     },
     {
@@ -75,7 +75,7 @@ const ImageSlider = () => {
                     imageSliderImages.map((item, index) => (
                         <SwiperSlide key={index}>
                             <ImageGlobal key={index} imageGlobal={item}></ImageGlobal>
-                        </SwiperSlide>
+                        </SwiperSlide>  
                     ))
                 }
             </Swiper>

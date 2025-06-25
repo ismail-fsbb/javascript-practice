@@ -14,9 +14,9 @@
     --background-image-custom-radial: radial-gradient(120.34% 120.94% at 52.45% 23.31%, rgba(20, 64, 158, 1) 0%, rgba(13, 43, 111, 1) 30%, rgb(2 14 48) 78%, rgb(0, 0, 13) 100%);
     --background-image-liner: linear-gradient(89deg, rgb(255, 79, 185) 0%, rgb(255, 212, 102) 100%);
 
-    --background-image-about: url('../../public/assets/images/about-image-bg.png');
+    /* --background-image-about: url('../../public/assets/images/about-image-bg.png');
     --background-image-hero: linear-gradient(180deg, rgba(19, 60, 149, 0) 0%, rgba(19, 60, 149, 0.60) 100%),url('../../public/assets/images/hero-bg-white-blue-marble-color-mix-textured-backdrop.png');
-    --background-image-cta-1: linear-gradient(0deg,rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0.1) 100%),url('../../public/assets/images/cta-bg-1.png');
+    --background-image-cta-1: linear-gradient(0deg,rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0.1) 100%),url('../../public/assets/images/cta-bg-1.png'); */
 
     /* Text Shadow */
     --text-shadow-1: 0px -6px 4px rgba(255,255,255,.13), 0px 6px 5px rgb(31,81,190);

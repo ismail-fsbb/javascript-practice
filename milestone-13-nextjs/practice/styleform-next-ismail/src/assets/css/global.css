@@ -75,7 +75,7 @@
     }
 
     section{
-        @apply overflow-hidden py-12 xl:py-16 2xl:py-24;
+        @apply overflow-hidden py-14 xl:py-16 2xl:py-24;
     }
     
 }
@@ -87,7 +87,7 @@
     }
     /* title */
     .d2c_section_title{
-        @apply text-3xl md:text-[38px] lg:text-5xl xl:text-6xl 2xl:text-6xl-1 leading-[1.5] xl:leading-[1.3] text-shadow-3 font-semibold uppercase;
+        @apply text-3xl md:text-[38px] lg:text-5xl xl:text-6xl 2xl:text-6xl-1 text-shadow-3 font-semibold uppercase;
     }
     .d2c_section_sub_title{
         @apply text-2xl lg:text-2xl-1 xl:text-4xl-1 font-bold text-shadow-2;
@@ -98,7 +98,7 @@
         @apply mb-5;
     }
     .d2c_blog_title{
-        @apply font-secondary text-xl md:text-xl lg:text-[22px] xl:text-2xl-1 text-white text-center lg:text-left;
+        @apply font-secondary text-xl md:text-xl lg:text-[22px] xl:text-2xl-1 text-white;
     }
     .d2c_post_image{
         @apply mix-blend-luminosity h-[277px];
@@ -106,7 +106,7 @@
 
     /* Button */
     .d2c_btn{
-        @apply px-6 py-3 md:px-10 md:py-4 bg-white uppercase text-primary font-primary font-bold text-[15px] md:text-xl shadow-1 inline-block cursor-pointer;
+        @apply px-6 py-3 md:px-10 md:py-4 bg-white uppercase text-primary font-primary font-bold text-[15px] md:text-xl shadow-1 inline-block;
     }
 
     /* Small rounded shape white bg */
@@ -138,22 +138,27 @@
         @apply px-6 lg:px-10 py-2 lg:py-3;
     }
     .d2c_navigation .nav_link,#mobile-menu .nav_link{
-        @apply text-light-blue inline-block text-base xl:text-xl font-secondary font-medium transition duration-300 capitalize py-1 mb-0 relative after:content-[''] after:absolute after:!h-1 after:w-1 after:transition-all after:rounded-lg after:left-1/2 after:transform after:-translate-x-1/2 after:-bottom-1 after:bg-liner after:shadow-liner after:opacity-0 hover:after:w-6 hover:after:opacity-100;
+        @apply text-light-blue inline-block text-base xl:text-xl font-secondary font-medium transition duration-300 capitalize py-2 mb-0 relative after:content-[''] after:absolute after:h-2 after:w-1 after:transition-all after:rounded-lg after:left-1/2 after:transform after:-translate-x-1/2 after:-bottom-1 after:bg-liner after:shadow-liner after:opacity-0 hover:after:w-6 hover:after:opacity-100;
     }
-    .d2c_navigation .nav_link.active,#mobile-menu .nav_link.active{
-        @apply after:!w-6 after:!opacity-100 transition-all;
-    }
-    #mobile-menu .nav_link.active{
-        @apply after:!w-6 after:!opacity-100 transition-all after:left-0 after:translate-x-4;
+    .d2c_navigation .nav_link.active{
+        @apply after:content-[''] after:w-6 after:opacity-100 transition-all;
     }
     #mobile-menu-btn{
-        @apply border rounded-sm  bg-primary p-1 text-light-blue border-light-blue focus:outline-none transition-all duration-500 ml-2;
+        @apply border rounded-sm  bg-primary p-1 text-light-blue border-light-blue focus:outline-none transition-all duration-500;
+    }
+    #mobile-menu {
+        @apply top-3 opacity-100 visible ;
+        transition: top 1s ease-in-out, opacity 1s ease-in-out;
     }
     #mobile-menu .nav_link{
-        @apply text-light-blue lg:text-center text-2xl;
+        @apply text-light-blue text-center text-2xl;
     }
     .nav_link_Small{
-        @apply py-1 lg:py-0 px-4 lg:px-0 capitalize;
+        @apply py-1 lg:py-0 capitalize;
+    }
+    /* When hidden, move it off-screen and fade out */
+    #mobile-menu.hidden {
+        @apply top-[-200px] opacity-0 visible block;
     }
 
 
@@ -169,21 +174,6 @@
         @apply text-2xl font-bold font-secondary capitalize mt-8;
     }
 
-    /* Amazing Thins section  */
-    .d2c_things_icon{
-        @apply w-[80px] h-[80px] lg:w-14 lg:h-14 xl:w-[112px] xl:h-[112px] rounded-md bg-white flex items-center justify-center p-4 lg:p-3 xl:p-4 shadow-1;
-    }
-
-    /* Call to action */
-    .d2c_cta_box{
-        @apply bg-white/10 rounded-[10px] shadow-4 pt-10 lg:pt-20 max-w-full xl:max-w-[1460px] mx-auto;
-    }
-
-    /* Gallery section */
-    .d2c_gallery_small_image{
-        @apply block w-full h-[250px] md:h-[120px] lg:h-[184px] bg-cover bg-center bg-no-repeat transition-all 	shadow-gallery-image;
-    }
-
     /* Awards card section */
     .d2c_awards_wrapper{
         @apply grid md:grid-cols-2 gap-10 lg:gap-16 xl:gap-24;
@@ -194,25 +184,19 @@
     .d2c_award_card_title{
         @apply text-lg xl:text-2xl uppercase font-bold text-center;
     }
-    .d2c_award_icon{
-        @apply max-w-[114px] mx-auto;
-    }
 
     /* Logo Slider */
     .d2c_logo_wrapper{
         @apply p-5 bg-white/10 h-20 md:h-24 xl:h-[120px] 2xl:h-[140px] rounded-lg flex items-center justify-center;
     }
-    .d2c_logo_wrapper img{
-        @apply max-h-[53px];
-    }
 
     /* ======================= About page ======================= */
     /* Team section */
     .d2c_team_card{
-        @apply p-3 shadow-4 bg-white/10 overflow-hidden;
+        @apply p-3 shadow-4 bg-white/10;
     }
     .d2c_team_image_wrapper{
-        @apply w-full h-[300px] lg:h-[260px];
+        @apply w-full h-[260px];
     }
     .d2c_expert_name{
         @apply uppercase text-xl font-bold;
@@ -249,10 +233,10 @@
     .preloader{
         @apply h-full fixed w-full z-50 bg-primary transition duration-300 flex items-center justify-center;
     }
-    .d2c_loader {
+    .custom-loader {
         @apply w-[120px] h-[22px] rounded-[40px] text-light-blue border-2 border-solid relative overflow-hidden bg-light-blue mt-[15px];
     }
-    .d2c_loader::before {
+    .custom-loader::before {
         @apply content-[''] absolute m-[2px] w-[14px] top-0 bottom-0 left-[-20px] rounded-[inherit] bg-primary shadow-[-10px_0_12px_3px_var(--color-primary)];
     }
 
@@ -317,7 +301,7 @@
         filter: drop-shadow(rgba(255, 255, 255, 0.13) 0px -8px 2px) drop-shadow(rgb(77, 97, 200) 0px 8px 3px);
     }
     /* {Preloader */
-    .d2c_loader::before {
+    .custom-loader::before {
         clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%, -30px 50%);
         animation: continuous 1s infinite linear;
     }
@@ -325,4 +309,6 @@
     @keyframes continuous {
         100% {left: calc(100% + 20px)}
     }
+
+    
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import logoImage from "../../../public/assets/images/logo/logo.png";
+import logoImage from "@/assets/images/logo/logo.png";
 
 export default function Nav() {
   return (
@@ -9,7 +9,7 @@ export default function Nav() {
             <div className="mr-auto flex justify-between items-center gap-3 lg:gap-6">
                 <div className="flex items-center gap-4 justify-between md:justify-baseline flex-wrap w-full container">
                     <div className="md:mr-5">
-                        <a href="./index.html" id="home-link">
+                        <a href="/" id="home-link">
                             <Image 
                                 src={logoImage.src} 
                                 width={logoImage.width}
@@ -20,10 +20,10 @@ export default function Nav() {
                         </a>
                     </div>
                     <div className="hidden lg:flex space-x-10 d2c_navigation ml-auto" id="d2c_nav_link_wrapper">
-                        <a href="./index.html" className="nav_link nav_link_Small active">Home</a>
-                        <a href="./pages/about.html" className="nav_link nav_link_Small">About</a>
-                        <a href="./pages/gallery.html" className="nav_link nav_link_Small">Gallery</a>
-                        <a href="./pages/blog.html" className="nav_link nav_link_Small">Blog</a>
+                        <a href="#" className="nav_link nav_link_Small active">Home</a>
+                        <a href="#" className="nav_link nav_link_Small">About</a>
+                        <a href="#" className="nav_link nav_link_Small">Gallery</a>
+                        <a href="#" className="nav_link nav_link_Small">Blog</a>
                     </div>
 
                     <div className="hidden md:block ml-auto lg:ml-5">

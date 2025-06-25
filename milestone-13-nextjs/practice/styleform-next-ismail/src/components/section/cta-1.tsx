@@ -1,5 +1,5 @@
 import React from 'react';
-import ctaImage from "../../../public/assets/images/CTA-model-image.png";
+import ctaImage from "@/assets/images/CTA-model-image.png";
 import Image from 'next/image';
 
 export default function Cta1() {

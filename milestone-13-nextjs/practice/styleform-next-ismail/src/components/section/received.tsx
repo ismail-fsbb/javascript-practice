@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import receivedIcon1 from "../../../public/assets/images/Award-Icon-1.png";
-import receivedIcon2 from "../../../public/assets/images/Award-Icon-2.png";
-import receivedIcon3 from "../../../public/assets/images/Award-Icon-3.png";
-import receivedIcon4 from "../../../public/assets/images/Award-Icon-3.png";
+import receivedIcon1 from "@/assets/images/Award-Icon-1.png";
+import receivedIcon2 from "@/assets/images/Award-Icon-2.png";
+import receivedIcon3 from "@/assets/images/Award-Icon-3.png";
+import receivedIcon4 from "@/assets/images/Award-Icon-3.png";
 
 
 export default function Received() {

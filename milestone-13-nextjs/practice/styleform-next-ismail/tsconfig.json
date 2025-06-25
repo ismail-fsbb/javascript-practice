@@ -2,9 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".", // 👈 required for path alias
     "paths": {
-      "@/*": [
-        "./*"
-      ] // 👈 @ = project root
+      "@/*": ["src/*"]// 👈 @ = project root
     },
     "target": "ES2017",
     "lib": [

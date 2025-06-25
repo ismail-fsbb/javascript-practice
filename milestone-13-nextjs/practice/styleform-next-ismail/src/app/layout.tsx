@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Orbitron, Saira } from "next/font/google";
 import "./global.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const orbitron = Orbitron({
   subsets: ["latin"],
+  variable: "--font-orbitron", // 👈 CSS variable for Orbitron
+  weight: ["400", "700"], // you can customize weights
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const saira = Saira({
   subsets: ["latin"],
+  variable: "--font-saira", // 👈 CSS variable for Saira
+  weight: ["400", "600"], // adjust as needed
 });
 
 export const metadata: Metadata = {
@@ -25,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${orbitron.variable} ${saira.variable} antialiased`}
       >
         {children}
       </body>
